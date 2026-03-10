@@ -87,6 +87,8 @@ export interface InputBase {
   readonly?: boolean;
   validations?: FormValidator[];
   validationTrigger?: ValidationTrigger;
+  /** Callback chamado quando o valor do campo muda (por campo). */
+  onChange?: (value: unknown) => void;
 }
 
 export type TextInput = InputBase & {

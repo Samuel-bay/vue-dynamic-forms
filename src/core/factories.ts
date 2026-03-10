@@ -35,6 +35,7 @@ export const FieldBase = ({
   disabled = false,
   placeholder = null,
   autocomplete = null,
+  onChange = null,
   readonly = false,
   validationTrigger = ValidatorTrigger({
     type: ValidationTriggerTypes.BLUR,
@@ -51,6 +52,7 @@ export const FieldBase = ({
     disabled,
     placeholder,
     autocomplete,
+    onChange,
     readonly,
     validationTrigger,
   } as InputBase);

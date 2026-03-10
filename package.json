@@ -1,6 +1,6 @@
 {
   "name": "@mathmore0000/vue-dynamic-forms",
-  "version": "1.1.8",
+  "version": "1.2.8",
   "description": "Forked version of vue-dynamic-forms with a lot of improvements and fixes",
   "author": "Matheus Moreira",
   "publishConfig": {
@@ -20,7 +20,7 @@
     "test:e2e:ci": "cypress run",
     "lint": "lint",
     "build:dts": "api-extractor run --local --verbose && tail -n +7 >> dist/as-dynamic-forms.d.ts",
-    "postinstall": "is-ci || husky install",
+    "_postinstall": "is-ci || husky install",
     "postpublish": "pinst --enable",
     "prepublishOnly": "tsc --project tsconfig.json --noEmit && npm run build && pinst --disable",
     "semantic-release": "semantic-release",

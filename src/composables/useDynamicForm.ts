@@ -182,6 +182,9 @@ export function useDynamicForm(
     if (updatedCtrl) {
       updatedCtrl.value = event.value as string
       updatedCtrl.dirty = true
+      if (typeof updatedCtrl.onChange === 'function') {
+        updatedCtrl.onChange(event.value)
+      }
     }
     debounceEmitChanges(formValues.value)
   }
@@ -215,7 +218,6 @@ export function useDynamicForm(
       updatedCtrl.valid = !updatedCtrl.validations?.length || isFieldValid;
     }
   }
-  
 
   function detectChanges(fields) {
     const changes = diff(cache, deepClone(fields))
