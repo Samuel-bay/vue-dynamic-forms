@@ -215,6 +215,7 @@ export function useDynamicForm(
       updatedCtrl.valid = !updatedCtrl.validations?.length || isFieldValid;
     }
   }
+  
 
   function detectChanges(fields) {
     const changes = diff(cache, deepClone(fields))
